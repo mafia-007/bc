@@ -4,7 +4,8 @@ local groupa = group[tostring(msg.chat_id)]
 if not groupa then
 group[tostring(msg.chat_id)] = {
         group_type = 'SuperGroup',
-		by = msg.from_id,
+		by = msg.from_id
+	}
       save_data(_config.group.data, group)
 tg.sendMessage(msg.chat_id, msg.id_, 1, 'slm', 1)
 else
